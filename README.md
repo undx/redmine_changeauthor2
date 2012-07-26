@@ -18,5 +18,5 @@ Restart Redmime and check if the plugin works by going to `Administration` -> `P
 
 # TODO
 
-* <strike>implement log in history</strike>
-* <strike>put a hook after change</strike>
+* implement log in history - *DONE* 
+* put a hook after change - *DONE*
