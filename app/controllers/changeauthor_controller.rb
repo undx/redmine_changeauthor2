@@ -13,20 +13,21 @@ class ChangeauthorController < ApplicationController
   end
 
   def edit
-    @issue=Issue.find_by_id(params[:issue_id])
+    @issue = Issue.find_by_id(params[:issue_id])
+    old_user = @issue.author
+    new_user = User.find params[:authorid]
     if @issue.update_attribute(:author_id, params[:authorid])
       flash[:notice] = l(:notice_successful_update)
-# TODO add log in history here
-#      flash[:notice] = "??? "
-#      call_hook(:controller_redmine_changeauthor_edit_after_save, { :author_id => params[:authorid], :issue => @issue })
+      # user hook
+      call_hook(:controller_redmine_changeauthor_edit_after_save, :author => new_user, :old_author => old_user, :issue => @issue)
+      # log replacement into journal
+      if Setting['plugin_redmine_changeauthor']['redmine_changeauthor_log_setting']=='yes'
+        @issue.init_journal(User.current, l(:log_entry_author_changed, :old_user => old_user, :new_user => new_user)).save
+      end
+
       redirect_to :controller => "issues", :action => "show", :id => params[:issue_id]
     else
       redirect_to :controller => "changeauthor", :action => "edit", :id => params[:issue_id]
     end
-  end
-
-  private
-  def find_and_destroy_relation(id)
-    H4prelation.delete_all(["project_identifier = ?", id])
   end
 end

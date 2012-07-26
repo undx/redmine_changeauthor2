@@ -4,4 +4,4 @@ nl:
   head_authorchange: "Verander huidige auteur naar "
   label_authorchange_setlog: "Wijzigingen tonen in de geschiedenis? "
   label_authorchange_setlog_description: "Veranderingen zullen worden weergegeven in de geschiedenis van de ticket"
-
+  log_entry_author_changed: "Author *%{old_user}* replaced by *%{new_user}*."

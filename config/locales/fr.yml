@@ -5,4 +5,4 @@ fr:
   head_authorchange: "Changer d'auteur pour "
   label_authorchange_setlog: "Consigner dans le journal? "
   label_authorchange_setlog_description: "Les changements seront consignés dans le journal de la demande"
-  
+  log_entry_author_changed: "Auteur *%{old_user}* remplacé par *%{new_user}*."
