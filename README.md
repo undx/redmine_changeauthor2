@@ -15,3 +15,7 @@ Go into your Redmine 2.0 folder, then
     git clone https://github.com/undx/redmine_changeauthor2.git
 
 Restart Redmime and check if the plugin works by going to `Administration` -> `Plugins`.
+
+# TODO
+
+* implement log in history

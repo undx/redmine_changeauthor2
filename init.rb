@@ -6,7 +6,7 @@ Redmine::Plugin.register :redmine_changeauthor do
   author 'Tom Stark @fragtom'
   description 'Plugin for author change'
   version '0.0.2' 
-  settings :default => {'redmine_changeauthor_log_setting' => '0'}, :partial => 'settings/redmine_changeauthor_settings'
+  settings :default => {'redmine_changeauthor_log_setting' => 'no'}, :partial => 'settings/redmine_changeauthor_settings'
 
   requires_redmine :version_or_higher => '2.0.0'
 
