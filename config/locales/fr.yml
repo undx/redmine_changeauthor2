@@ -1,0 +1,8 @@
+# French strings go here for Rails i18n
+fr:
+  button_authorchange: "Changer auteur"
+  label_authorchange: "L'auteur actuel est "
+  head_authorchange: "Changer d'auteur pour "
+  label_authorchange_setlog: "Consigner dans le journal? "
+  label_authorchange_setlog_description: "Les changements seront consignés dans le journal de la demande"
+  
