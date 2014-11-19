@@ -1,0 +1,7 @@
+pl:
+  button_authorchange: "Zmień autora"
+  label_authorchange: "Obecny autor to "
+  head_authorchange: "Zmień obecnego autora na "
+  label_authorchange_setlog: "Czy zapisywać zmianę autora w historii zlecenia? "
+  label_authorchange_setlog_description: "Zmana zostanie zapisana w historii tego zlecenia"
+  log_entry_author_changed: "%{old_user} został zmieniony na %{new_user}."
